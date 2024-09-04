@@ -20,8 +20,7 @@ services:
           path: ./apache/app
           target: /app/matecat
         - action: rebuild
-          path: ./apache/app/package.json
-
+          path: ./apache/app/package.json       
     environment:
       - TZ=UTC
       - CLI_HTTP_HOST=https://${HOSTNAME:-localhost}:${APACHE_HTTPS_PORT:-8443}
